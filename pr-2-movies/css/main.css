@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "Big John Regular";
+    src: url("fonts/BIG JOHN-webfont.woff") format('woff');
+}
+
+@font-face {
+    font-family: "Azo Sans Regular";
+    src: url("fonts/azosans-reg.woff") format('woff');
+}
+
+.header {
+    position: absolute;
+    top: 40px;
+}
+
+*::selection {
+    background: #de553d;
+    color: white;
+}
+
+body {
+    background-color: #dfd4d1;
+}
+
+
+h1 {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 40px;
+    background-color: #1e2420;
+    color: white;
+    text-align: center;
+    width: 55%;
+    margin: auto;
+    padding: 5px 1px 0px 1px;
+}
+
+h2 {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 28px;
+    color: #1e2420;
+    text-align: center;
+    padding: 10px 3px 3px 1px;
+    margin: auto;
+}
+
+.underline {
+    height: 8px;
+    width: 330px;
+    background-color: #de553d;
+    margin: 20px auto;
+
+}
+
+.orange {
+    width: 33%;
+    margin: 20px auto;
+}
+
+h3 {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 20px;
+    background-color: #1e2420;
+    color: white;
+    text-align: center;
+    width: 37%;
+    margin: auto;
+    padding: 05px 2px 2px 1px;
+}
+
+h4 {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 20px;
+    color: #1e2420;
+    text-align: center;
+    padding: 5px 1px 0px 1px;
+    margin: auto;
+}
+
+p {
+    font-family: 'Azo Sans Regular', sans-serif;
+    font-size: 10px;
+    color: #1e2420;
+    text-align: center;
+    padding: 25px 1px 0px 1px;
+    line-height: 14px;
+}
+
+
+em {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 10px;
+    color: #1e2420;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+em:hover {
+    font-family: 'Big John Regular', sans-serif;
+    font-size: 10px;
+    color: #de553d;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.nav {
+    margin: 15px;
+}
