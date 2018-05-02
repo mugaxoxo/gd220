@@ -212,6 +212,7 @@ em:hover {
 
 .nav:hover {
     opacity: .5;
+    cursor: pointer;
 }
 
 .shi-wall {
