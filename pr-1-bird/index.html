@@ -38,13 +38,13 @@ Got dizzy.
             letter-spacing: 0.1vw;
         }
 
+
         .img-bird {
             background-size: cover;
         }
 
         .img-bird-1 {
             background-image: url("images/img-bird-1.gif");
-
         }
 
         .img-bird-2 {
@@ -122,7 +122,71 @@ Got dizzy.
             top: 80%;
             left: 34%;
         }
+
+        .header {
+            position: fixed;
+            z-index: 10;
+        }
+
+        .lang {
+            z-index: 5;
+            width: 2.5%;
+            margin: 1vw;
+            float: right;
+        }
+
+        #rus {
+            position: relative;
+            left: 4.7vw;
+            z-index: -100;
+            opacity: 0;
+            transition: 0.5s ease;
+        }
+
+        #eng {
+            position: relative;
+            width: 2.75%;
+            transition: 0.5s ease;
+        }
+
+        .lang:hover {
+            opacity: 0.5;
+            transition: 0.2s ease;
+        }
+
     </style>
+
+
+    <script>
+        function enTrans() {
+            document.getElementById("chi").innerHTML = "birdie,"
+            document.getElementById("pi").innerHTML = "birdie,"
+            document.getElementById("gde").innerHTML = "where've you been?"
+            document.getElementById("na").innerHTML = "By the river drinking gin. "
+            document.getElementById("vy1").innerHTML = "Had a shot,"
+            document.getElementById("vy2").innerHTML = "and then one more. "
+            document.getElementById("za").innerHTML = "what is real anymore?"
+            document.getElementById("eng").style.zIndex = "-100";
+            document.getElementById("rus").style.zIndex = "100";
+            document.getElementById("eng").style.opacity = "0";
+            document.getElementById("rus").style.opacity = "1";
+        }
+
+        function ruTrans() {
+            document.getElementById("chi").innerHTML = "чижик"
+            document.getElementById("pi").innerHTML = "пыжик,"
+            document.getElementById("gde").innerHTML = "где ты был?"
+            document.getElementById("na").innerHTML = "на фонтанке водку пил."
+            document.getElementById("vy1").innerHTML = "выпил рюмку,"
+            document.getElementById("vy2").innerHTML = "выпил две,"
+            document.getElementById("za").innerHTML = "зашумело в голове."
+            document.getElementById("rus").style.zIndex = "-100";
+            document.getElementById("eng").style.zIndex = "100";
+            document.getElementById("eng").style.opacity = "1";
+            document.getElementById("rus").style.opacity = "0";
+        }
+
+    </script>
 </head>
 
 <body>
@@ -132,53 +196,48 @@ Got dizzy.
 
         <!-- YOUR HTML CODE BELOW -->
         <div class="row">
+
+            <div class="header">
+                <img class="lang" id="eng" onClick="enTrans()" src="images/en.png" alt="">
+                <img class="lang" id="rus" onClick="ruTrans()" src="images/ru.png" alt=""></div>
             <div class="col-100 half img-bird img-bird-1">
             </div>
 
             <div class="row">
                 <div class="col-100 half img-bird img-bird-2">
-                    <p class="tl">чижик</p>
-                    <p class="br">пыжик,</p>
+                    <p class="tl" id="chi">чижик</p>
+                    <p class="br" id="pi">пыжик,</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-100 half img-bird img-bird-3">
-                    <p class="tc">где ты был?</p>
+                    <p class="tc" id="gde">где ты был?</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-100 half img-bird img-bird-4">
-                    <p class="bc">на фонтанке водку пил.</p>
+                    <p class="bc" id="na">на фонтанке водку пил.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-100 half img-bird img-bird-5">
-                    <p class="bl">выпил рюмку,</p>
+                    <p class="bl" id="vy1">выпил рюмку,</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-100 half img-bird img-bird-6">
-                    <p class="br2">выпил две,</p>
+                    <p class="br2" id="vy2">выпил две,</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-100 half img-bird img-bird-7">
-                    <p class="bc2">зашумело в голове.</p>
+                    <p class="bc2" id="za">зашумело в голове.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- DO NOT CHANGE CODES BELOW-->
-    <script src="js/jquery-3.1.0.min.js"></script>
-    <script src="js/jquery.lazyload.js"></script>
-    <script type="text/javascript">
-        $(function() {
-            $('div').lazyload(
-                effect: "fadeIn"
-            );
-        });
-    </script>
 </body>
 
 </html>
