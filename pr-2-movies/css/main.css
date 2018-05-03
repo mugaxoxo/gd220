@@ -123,6 +123,7 @@ em:hover {
 
 .nav {
     margin: 15px;
+    cursor: pointer;
 }
 
 
